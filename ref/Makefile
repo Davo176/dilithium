@@ -32,6 +32,8 @@ all: \
   PQCgenKAT_sign3aes \
   PQCgenKAT_sign5aes
 
+additionalTesting: addRandTest2 addRandTest3 addRandTest5 addSignTest2 addSignTest3 addSignTest5
+
 speed: \
   test/test_mul \
   test/test_speed2 \
