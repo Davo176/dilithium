@@ -9,6 +9,15 @@ This repository contains the official reference implementation of the [Dilithium
 The implementations contain several test and benchmarking programs and a Makefile to facilitate compilation.
 
 ## Build additional tests
+Run the following
+cd ref
+make additionalTesting
+./addRandTest2
+./addRandTest3
+./addRandTest5
+./addSignTest2
+./addSignTest3
+./addSignTest5
 
 
 ### Prerequisites
