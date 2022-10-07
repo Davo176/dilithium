@@ -8,6 +8,18 @@ This repository contains the official reference implementation of the [Dilithium
 
 The implementations contain several test and benchmarking programs and a Makefile to facilitate compilation.
 
+## Build additional tests
+Run the following
+cd ref
+make additionalTesting
+./addRandTest2
+./addRandTest3
+./addRandTest5
+./addSignTest2
+./addSignTest3
+./addSignTest5
+
+
 ### Prerequisites
 
 Some of the test programs require [OpenSSL](https://openssl.org). If the OpenSSL header files and/or shared libraries do not lie in one of the standard locations on your system, it is necessary to specify their location via compiler and linker flags in the environment variables `CFLAGS`, `NISTFLAGS`, and `LDFLAGS`.
