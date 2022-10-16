@@ -229,6 +229,51 @@ addRandTest5: addRandTest.c rng.c rng.h $(KECCAK_SOURCES) \
 	$(CC) $(NISTFLAGS) -DDILITHIUM_MODE=5 \
 	  -o $@ $< rng.c $(KECCAK_SOURCES) $(LDFLAGS) -lcrypto
 
+createKeyPairs2: createKeyPairs.c rng.c rng.h $(KECCAK_SOURCES) \
+  $(KECCAK_HEADERS)
+	$(CC) $(NISTFLAGS) -DDILITHIUM_MODE=2 \
+	  -o $@ $< rng.c $(KECCAK_SOURCES) $(LDFLAGS) -lcrypto
+
+createKeyPairs3: createKeyPairs.c rng.c rng.h $(KECCAK_SOURCES) \
+  $(KECCAK_HEADERS)
+	$(CC) $(NISTFLAGS) -DDILITHIUM_MODE=3 \
+	  -o $@ $< rng.c $(KECCAK_SOURCES) $(LDFLAGS) -lcrypto
+
+createKeyPairs5: createKeyPairs.c rng.c rng.h $(KECCAK_SOURCES) \
+  $(KECCAK_HEADERS)
+	$(CC) $(NISTFLAGS) -DDILITHIUM_MODE=5 \
+	  -o $@ $< rng.c $(KECCAK_SOURCES) $(LDFLAGS) -lcrypto
+
+createSigned2: createSigned.c rng.c rng.h $(KECCAK_SOURCES) \
+  $(KECCAK_HEADERS)
+	$(CC) $(NISTFLAGS) -DDILITHIUM_MODE=2 \
+	  -o $@ $< rng.c $(KECCAK_SOURCES) $(LDFLAGS) -lcrypto
+
+createSigned3: createSigned.c rng.c rng.h $(KECCAK_SOURCES) \
+  $(KECCAK_HEADERS)
+	$(CC) $(NISTFLAGS) -DDILITHIUM_MODE=3 \
+	  -o $@ $< rng.c $(KECCAK_SOURCES) $(LDFLAGS) -lcrypto
+
+createSigned5: createSigned.c rng.c rng.h $(KECCAK_SOURCES) \
+  $(KECCAK_HEADERS)
+	$(CC) $(NISTFLAGS) -DDILITHIUM_MODE=5 \
+	  -o $@ $< rng.c $(KECCAK_SOURCES) $(LDFLAGS) -lcrypto
+
+checkSigned2: checkSigned.c rng.c rng.h $(KECCAK_SOURCES) \
+  $(KECCAK_HEADERS)
+	$(CC) $(NISTFLAGS) -DDILITHIUM_MODE=2 \
+	  -o $@ $< rng.c $(KECCAK_SOURCES) $(LDFLAGS) -lcrypto -g
+
+checkSigned3: checkSigned.c rng.c rng.h $(KECCAK_SOURCES) \
+  $(KECCAK_HEADERS)
+	$(CC) $(NISTFLAGS) -DDILITHIUM_MODE=3 \
+	  -o $@ $< rng.c $(KECCAK_SOURCES) $(LDFLAGS) -lcrypto
+
+checkSigned5: checkSigned.c rng.c rng.h $(KECCAK_SOURCES) \
+  $(KECCAK_HEADERS)
+	$(CC) $(NISTFLAGS) -DDILITHIUM_MODE=5 \
+	  -o $@ $< rng.c $(KECCAK_SOURCES) $(LDFLAGS) -lcrypto
+
 
 PQCgenKAT_sign2aes: PQCgenKAT_sign.c rng.c rng.h $(AES_SOURCES) \
   $(AES_HEADERS)
