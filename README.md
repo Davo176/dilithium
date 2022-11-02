@@ -8,7 +8,7 @@ This repository contains the official reference implementation of the [Dilithium
 
 The implementations contain several test and benchmarking programs and a Makefile to facilitate compilation.
 
-## Build additional tests
+## Will Davis - Build additional tests
 Run the following
 cd ref
 make additionalTesting
@@ -18,6 +18,28 @@ make additionalTesting
 ./addSignTest2
 ./addSignTest3
 ./addSignTest5
+
+For interoperability testing
+You will again have to *manually* change the code to swap between csharp and java
+then for each you can run:
+make createKeyPairs2
+make createKeyPairs3
+make createKeyPairs5
+./createKeyPairs2
+./createKeyPairs3
+./createKeyPairs5
+make createSigned2
+make createSigned3
+make createSigned5
+./createSigned2
+./createSigned3
+./createSigned5
+make checkSigned2
+make checkSigned3
+make checkSigned5
+./checkSigned2
+./checkSigned3
+./checkSigned5
 
 
 ### Prerequisites
